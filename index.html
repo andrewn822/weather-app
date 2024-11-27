@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" src="./css/styles.css">
-    <title>The Weekly Forecast</title>
+    <title>weather4u</title>
 </head>
 <body>
     <header class="flex-column">
-        <h1>The Weekly Forecast</h1>
+        <h1>weather4u</h1>
     </header>
 
     <main class="flex-row justify-content">
@@ -17,7 +17,7 @@
             <div class="card">
                 <h3>Search by City Name:</h3>
                 <form id="weather-form" class="card-body">
-                    <label class="weather-form-label">City</label>
+                    <label class="weather-form-label" for="city-name">City</label>
                     <input name="city-name" id="city-name" type="text" class="form-input">
                     <button type="submit" class="btn">Get Forecast</button>
                 </form>
@@ -25,10 +25,14 @@
         </div>
 
         <div class="col-12 col-md-8">
-            <h2 class="subtitle">Showing Weekly Forecast For: <span id="city-search-term"></span> </h2>
-            <div id="forecast-container" class="list-group"></div>
+            <h2 class="subtitle">Showing Next 5 Day Forecast For: <span id="city-search-term"></span> </h2>
+            <div id="forecast-container" class="list-group">
+                <ul class="forecast-display-container"></ul>
+            </div>
         </div>
 
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
         <script src="./js/script.js"></script>
 
 
